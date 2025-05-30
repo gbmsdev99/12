@@ -18,7 +18,6 @@ export function ManualEntryPage() {
   const [images, setImages] = useState<Record<string, string>>({});
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [preview, setPreview] = useState<Question[]>([]);
-  const [showLatexHelper, setShowLatexHelper] = useState(false);
   const [selectedQuestionType, setSelectedQuestionType] = useState<QuestionType>(QuestionType.MULTIPLE_CHOICE);
   const [selectedDifficulty, setSelectedDifficulty] = useState<DifficultyLevel>(DifficultyLevel.MEDIUM);
 
@@ -128,7 +127,7 @@ export function ManualEntryPage() {
         if (!questionMatch) continue;
 
         question.text = questionMatch[1].trim();
-        const options: QuestionOption[] = [];
+        const options = [];
         const optionsMatch = block.match(/[A-D]\.\s+([^\n]+)/g);
         
         if (optionsMatch) {
