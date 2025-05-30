@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { 
-  FileText, Image as ImageIcon, AlertCircle, Save, 
+  FileUp, List, Image as ImageIcon, AlertCircle, Save, 
   FunctionSquare, ListChecks, ToggleLeft, AlignJustify, 
   SplitSquareHorizontal 
 } from 'lucide-react';
@@ -13,6 +13,7 @@ import { v4 as uuidv4 } from 'uuid';
 export function ManualEntryPage() {
   const navigate = useNavigate();
   const { addQuestion } = useTestStore();
+  const [searchTerm, setSearchTerm] = useState('');
   const [bulkText, setBulkText] = useState('');
   const [error, setError] = useState<string | null>(null);
   const [images, setImages] = useState<Record<string, string>>({});
