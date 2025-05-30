@@ -20,7 +20,6 @@
     "react-latex": "^2.0.0",
     "katex": "^0.16.9",
     "react-katex": "^3.0.1",
-    "react-syntax-highlighter": "^15.5.0",
     "jspdf": "^2.5.1",
     "docx": "^8.5.0",
     "y-websocket": "^1.5.4",
